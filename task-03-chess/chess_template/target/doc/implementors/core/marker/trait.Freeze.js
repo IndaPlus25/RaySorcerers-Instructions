@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"chess_template":[["impl Freeze for <a class=\"enum\" href=\"chess_template/enum.GameState.html\" title=\"enum chess_template::GameState\">GameState</a>",1,["chess_template::GameState"]],["impl Freeze for <a class=\"enum\" href=\"chess_template/enum.Colour.html\" title=\"enum chess_template::Colour\">Colour</a>",1,["chess_template::Colour"]],["impl Freeze for <a class=\"struct\" href=\"chess_template/struct.Game.html\" title=\"struct chess_template::Game\">Game</a>",1,["chess_template::Game"]]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"chess_template":[["impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.72.0/core/clone/trait.Clone.html\" title=\"trait core::clone::Clone\">Clone</a> for <a class=\"enum\" href=\"chess_template/enum.GameState.html\" title=\"enum chess_template::GameState\">GameState</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()
