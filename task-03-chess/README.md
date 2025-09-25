@@ -6,7 +6,7 @@ Modified by: Isak Larsson
 
 With that quick introduction out of the way, we are going to dive deeper into Rust and write a game-engine! The task for this and next week is to implement the logic for chess.
 
-The implementation will be in the form of a library, that can be used by a GUI. Next task you will have to write GUIs for eachother's games, so keep that in mind when you write your API. 
+The implementation will be in the form of a library, that can be used by a GUI. Next task you will have to write GUIs for each other's games, so keep that in mind when you write your API. 
 
 **You must**
 * Use rust 🦀
@@ -20,7 +20,7 @@ The implementation will be in the form of a library, that can be used by a GUI. 
 The complete rules for chess can be found [here](https://en.wikipedia.org/wiki/Chess#Rules).
 
 **Required features**
-* Complete movesets for all pieces (except castling & en passant)
+* Complete move sets for all pieces (except castling & en passant)
 * Check
 * Turn indicator (whose turn it is)
 * Promotion
@@ -51,14 +51,14 @@ Your program should also export an enumerator `GameState` with the values:
 - _(optional)_ `DeadPosition`.
 
 
-> Note: You are ofccourse allowed to change any details of this interface, it might even be necessary to do so depending on your implementation.  
+> Note: You are of course allowed to change any details of this interface, it might even be necessary to do so depending on your implementation.  
 #### Expansion
 
-A GUI application could also make use of enumerables such as `Colour` and `PieceType`. You may also like to make changes to the above API depeding on your board representation. If your library API do not reflect the documentation above, write your own complementary documentation in your repository's `README.md` file.
+A GUI application could also make use of enumerables such as `Colour` and `PieceType`. You may also like to make changes to the above API depending on your board representation. If your library API do not reflect the documentation above, write your own complementary documentation in your repository's `README.md` file.
 
 ### Prepare assignment
 
-1) Create a repository named `<KTH_ID>-chess` under the `INDAPlus23` organisation and clone it.
+1) Create a repository named `<KTH_ID>-chess` under this organisation and clone it.
 2) Navigate into your newly created repository and initialise a Rust library crate with the following command.
 ```bash
 cargo init --lib
@@ -83,4 +83,4 @@ This can be done in multiple ways, one of which is the famous `doc`-comment.
 
 You can read more at https://doc.rust-lang.org/reference/comments.html
 
-> Note: I don't expect proffesional looking documentation, but atleast show some effort to try to document your code
+> Note: I don't expect professional looking documentation, but at least show some effort to try to document your code

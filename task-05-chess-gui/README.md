@@ -23,7 +23,7 @@ Take inspiration from existing chess games or go crazy and write something unort
 
 ### Prepare assignment
 
-1) Create a repository named `<KTH_ID>-chess-gui` under the `INDAPlus23` organisation and clone it.
+1) Create a repository named `<KTH_ID>-chess-gui` under our organisation and clone it.
 2) Navigate into your newly created repository and initialise a Rust application crate (like you did the first week).
 
 See the template crate for help with code setup.
@@ -37,7 +37,7 @@ The following is known to solve most issues:
 sudo apt install libasound2-dev libudev-dev pkg-config
 ```
 
-Unfortunately, GGEZ and WSL has been proven to be especially tricky. For example, if you are experiencing `'Failed to build context.: AudioError("Could not initialize sound system using default output device (for some reason)")'`, it is mentally sane to disenable the audio.
+Unfortunately, GGEZ and WSL has been proven to be especially tricky. For example, if you are experiencing `'Failed to build context.: AudioError("Could not initialize sound system using default output device (for some reason)")'`, it is mentally sane to disable the audio.
 ```rust
 ContextBuilder::new()./*...*/.modules(conf::ModuleConf::default().audio(false));
 ```
@@ -48,7 +48,7 @@ Navigate in your command prompt/terminal to `./task-5/chess-gui-templates/<pisto
 
 The `resources` directory contains image files for all chess pieces, as well as the application icon file. The chess piece image files are loaded into image structures; a gift from me to you. Switch out the image files if you prefer to render the pieces in a different style. 
 
-To switch from the uncomplete `chess-template` engine repository as a dependency, to one of your comrades' state of the art creations, change the target URL in the `Cargo.toml` file.
+To switch from the incomplete `chess-template` engine repository as a dependency, to one of your comrades' state of the art creations, change the target URL in the `Cargo.toml` file.
 ```toml
 chess_template = { git = "https://github.com/INDAPlus21/chess-template.git" }
 ```
