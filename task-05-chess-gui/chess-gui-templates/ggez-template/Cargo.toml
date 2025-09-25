@@ -1,0 +1,12 @@
+[package]
+name = "schack_gui"
+version = "0.1.0"
+authors = ["Eskil Queseth <eskilq@kth.se>", "Viola Söderlund <violaso@kth.se>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chess_template = { git = "https://github.com/INDAPlus21/chess-template.git" } # Replace this with the library you want to use
+linked-hash-map = "0.5.4" 
+ggez = "0.6.1"
