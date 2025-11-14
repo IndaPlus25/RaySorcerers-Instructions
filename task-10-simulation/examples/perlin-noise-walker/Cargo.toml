@@ -1,0 +1,17 @@
+[package]
+name = "perlin-noise-walker"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gfx_device_gl = "0.16.2"
+image = "0.24.5"
+piston = "0.53.0"
+piston_window = "*"
+piston2d-gfx_graphics = "0.79"
+piston2d-graphics = "0.42.0"
+pistoncore-glutin_window = "0.69.0"
+piston2d-opengl_graphics = "0.81.0"
+rand = "0.8.5"
