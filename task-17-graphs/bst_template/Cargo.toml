@@ -1,0 +1,7 @@
+[package]
+name = "tree_tests"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rstest = "0.24.0"
