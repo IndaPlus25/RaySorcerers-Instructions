@@ -1,23 +1,32 @@
 # Parallel Performance
+
 For the final task, we investigate the performance gains we can achieve by enabling parallelism and building programs that encourage concurrency as much as possible.
 
 ### 💀 Deadline
-This work should be completed before the exercise on **Thursday 19th April**.
+
+This work should be completed before the exercise on **Friday 4th April**.
 
 ### 👩‍🏫 Instructions
+
 For instructions on how to do and submit the assignment, please see the
-[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-23/course-instructions#assignments).
+[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-24/course-instructions#assignments).
 
 ### 📝 Preparation
-In Canvas there is a single activity called `Task Preparation` with a link to online material. You **must attempt all the questions** for the relevant task. You also must have accepted the section invitation via email to be able to access the material.
 
-You can also review the lecture slides: 
+Read and answer all questions in [Task 3: Parallel Performance](https://qbl.sys.kth.se/sections/dd1396_parallel_and_concurrent_kcj76/container/parallel_performance)
+
+- Make sure to read the ±feedback when you answer
+- You can try the questions multiple times with no penalty (eventually correct is the goal)
+
+You can also review the lecture slides:
+
 - [Concurrency Patterns and Mutexes](https://docs.google.com/presentation/d/193b7qpcEW3WdqmFGlA-4j9HL0FN0FdTtjYLuMg7cG7g/edit#slide=id.p)
 - [Group Synchronisation and Parallel Go](https://docs.google.com/presentation/d/15kkxEB998IV6hYOX_E-hacRMHelsNqtMgl45M8kSEOg/edit#slide=id.p)
 
 And read the companion literature:
-  - [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
-  - [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
+
+- [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
+- [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
 
 Finally, if you have not pushed an task submission before using Git/Github, then watch our [handy guide](https://www.youtube.com/watch?v=Sp5AASmX4no&list=PLZtN6QLX2rBA_gL6zs-qijIDihx-p2tO8).
 
@@ -28,8 +37,8 @@ Finally, if you have not pushed an task submission before using Git/Github, then
 ### 🚨 Troubleshooting Guide
 If you have any questions or problems, follow this procedure: <br/>
 
-1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-23/help/issues). Are other students asking about your problem?
-2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-24/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-24/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
 3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
 
 We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination.
@@ -73,11 +82,13 @@ the `time` keyword in Bash:
 
 ```bash
 $ time go run julia.go
+```
+Example output:
+```bash
 go run julia.go  11.10s user 0.60s system 97% cpu 11.974 total
 ```
 
-Your own system will have its own runtime, but in the example above we find that
-it completed in 11.10s with the CPU running at 97% load.
+The output provides several metrics, such as time spent in user mode, system mode, and CPU utilization, ending with the total elapsed time (wall-clock time). For this assignment you should focus on the "total" time for your measure of runtime, in the example output that would be `11.974` seconds.
 
 Your assignment is to find different ways to divide the computations so that
 they run in parallel on all available CPUs. Use the ideas from the example in
