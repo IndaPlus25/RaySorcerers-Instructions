@@ -18,7 +18,6 @@ func ConcurrentSum(a []int) int {
 	go sum(a[n/2:], ch)
 
 	// TODO Get the subtotals from the channel and return their sum
-	return -1
 }
 
 func main() {
