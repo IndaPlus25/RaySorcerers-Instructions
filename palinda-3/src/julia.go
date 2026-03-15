@@ -11,6 +11,7 @@ import (
 	"math/cmplx"
 	"os"
 	"strconv"
+
 )
 
 type ComplexFunc func(complex128) complex128
@@ -63,7 +64,7 @@ func Julia(f ComplexFunc, n int) image.Image {
 	return img
 }
 
-// Iterate sets z_0 = z, and repeatedly computes z_n = f(z_{n-1}), n â‰¥ 1,
+// Iterate sets z_0 = z, and repeatedly computes z_n = f(z_{n-1}), n ≥ 1,
 // until |z_n| > 2  or n = max and returns this n.
 func Iterate(f ComplexFunc, z complex128, max int) (n int) {
 	for ; n < max; n++ {

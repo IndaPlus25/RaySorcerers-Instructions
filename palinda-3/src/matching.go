@@ -20,7 +20,7 @@ func main() {
 	wg.Wait()
 	select {
 	case name := <-match:
-		fmt.Printf("No one received %sâ€™s message.\n", name)
+		fmt.Printf("No one received %s's message.\n", name)
 	default:
 		// There was no pending send operation.
 	}

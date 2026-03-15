@@ -12,19 +12,16 @@ import (
 )
 
 func main() {
-	// Use different random numbers each time this program is executed.
-	rand.Seed(time.Now().Unix())
-
 	const strings = 32
 	const producers = 4
 	const consumers = 2
 
 	before := time.Now()
 	ch := make(chan string)
-	wgp := new(sync.WaitGroup)
+	var wgp sync.WaitGroup
 	wgp.Add(producers)
 	for i := 0; i < producers; i++ {
-		go Produce("p"+strconv.Itoa(i), strings/producers, ch, wgp)
+		go Produce("p"+strconv.Itoa(i), strings/producers, ch, &wgp)
 	}
 	for i := 0; i < consumers; i++ {
 		go Consume("c"+strconv.Itoa(i), ch)
@@ -46,8 +43,8 @@ func Produce(id string, n int, ch chan<- string, wg *sync.WaitGroup) {
 // Consume prints strings received from the channel until the channel is closed.
 func Consume(id string, ch <-chan string) {
 	for s := range ch {
-		fmt.Println(id, "received", s)
 		RandomSleep(100) // Simulate time to consume data.
+		fmt.Println(id, "received", s)
 	}
 }
 

@@ -72,8 +72,3 @@ func prophecy(question string, answer chan<- string) {
 	}
 	answer <- longestWord + "... " + nonsense[rand.Intn(len(nonsense))]
 }
-
-func init() { // Functions called "init" are executed before the main function.
-	// Use new pseudo random numbers every time.
-	rand.Seed(time.Now().Unix())
-}

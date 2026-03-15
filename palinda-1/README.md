@@ -2,20 +2,20 @@
 
 Welcome to DD1396. In this task we will become acquainted with the Go programming language as well as touching upon its builtin concurrency features - goroutines and channels.
 
-### 💀 Deadline
+## 💀 Deadline
 
-This work should be completed before the exercise on **Friday 21st March**.
+This work should be completed before the exercise on either: **Thu 19 March** (DD1396) or **Fri 20 March** (DD1328 + DD1396), *depending on which exercise group you are in - your TA will let you know*.
 
-### 👩‍🏫 Instructions
+## 👩‍🏫 Instructions
 
 For instructions on how to do and submit the assignment, please see the
-[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-24/course-instructions#assignments).
+[assignments section of the course instructions](https://gits-15.sys.kth.se/inda-25/course-instructions#assignments).
 
-### 📝 Task Preparation
+## 📝 Task Preparation
 
 Answering questions is good for you, even if the subject is completely new!
 
-Read and answer all questions in [Task 1: Introduction to Go](https://qbl.sys.kth.se/sections/dd1396_parallel_and_concurrent_kcj76/container/introduction_to_go)
+Read and answer all questions in [Task 1: Introduction to Go](https://qbl.sys.kth.se/sections/dd1396_parallel_and_concurrent_mqniy/container/introduction_to_go)
 
 - Make sure to read the ±feedback when you answer
 - You can try the questions multiple times with no penalty (eventually correct is the goal)
@@ -34,25 +34,33 @@ And browse the companion literature:
 
 Finally, if you have not pushed an task submission before using Git/Github, then watch our [handy guide](https://www.youtube.com/watch?v=Sp5AASmX4no&list=PLZtN6QLX2rBA_gL6zs-qijIDihx-p2tO8).
 
-### ✅ Learning Goals
+## ✅ Learning Goals
 
 - Setup a functioning Go environment
 - Compare and contrast Go with either Java or Python
 - Use goroutines and channels to achieve concurrency
 
-### 🚨 Troubleshooting Guide
+## 🚨 Troubleshooting Guide
 
 If you have any questions or problems, follow this procedure:
 
-1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-24/help/issues). Are other students asking about your problem?
-2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-24/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-25/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-25/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
 3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
 
-We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination.
+We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination. If in doubt, refer to the **AI Policy on Canvas**.
 
-### 🏛 Assignment
+## 🗺️ Make a Plan
 
-#### Task 1 - Go Environment
+- Check your feedback on last week's issue tracker for a review and tips!
+- Open issues for your plan in the [issue tracker](/../../issues).
+- Commit at least once per issue.
+- Reference issues from commit messages using `Fixes #N` to automatically close them.
+- Read more about it [here](https://gits-15.sys.kth.se/inda-25/course-instructions/blob/main/ice-guide.md).
+
+## 🏛 Assignment
+
+### Task 1 - Go Environment
 
 The first task is to determine that you have a functioning Go environment on
 the computer that you are working from.
@@ -61,13 +69,13 @@ the computer that you are working from.
 - On your own computer - Goto the [downloads page](https://go.dev/dl/) for
   and follow the installation instructions for your preferred operating system.
 
-#### Task 2 - Go Fundamentals
+### Task 2 - Go Fundamentals
 
 In this task we shall familiarize ourselves with some programming concepts that you know from previous INDA courses, but in Go! It is recommended that you first check out [A Tour of Go](https://go.dev/tour/) for bite-sized tutorials that will cover the fundamentals of Go, including everything you need to solve the following tasks.
 
 > **Assistant's note:** The exercises in this fundamentals tasks are modified versions of a few select exercises found in A Tour of Go.
 
-##### Task 2.1 Functions and Loops
+#### Task 2.1 Functions and Loops
 
 In [src/basics/loops.go](src/basics/loops.go) you will find a code skeleton for which you are to implement a numerical method for solving a simple function.
 
@@ -87,7 +95,9 @@ Your task is specifically to create a loop inside the `Solver` that will run thi
 
 You can compare your answer to the correct answer by running the Go function `math.Cbrt()` to compute the cubic root of a number.
 
-##### Task 2.2 Slices
+[Open an issue for Task 2.1](../../issues/new?title=Task%202.1%3A%20Functions%20and%20Loops)
+
+#### Task 2.2 Slices
 
 In [src/basics/slices.go](src/basics/slices.go) you will find a code skeleton where you will implement and loop through slices.
 
@@ -102,7 +112,7 @@ fibonacci = [8]int{0, 1, 1, 2, 3, 5, 8, 13}
 fibonacci[2:5] // [1, 2, 3]
 // If no low is specified it is equal to zero
 fibonacci[:4] // [0, 1, 1, 2]
-// If no low is specified it is equal to keeping all elements
+// If no high is specified it is equal to keeping all elements
 // after and including the low index
 fibonacci[4:] // [ 3, 5, 8, 13]
 ```
@@ -121,17 +131,21 @@ Some interesting formulas to try are: `x^y`, `(x + y) / 2`, `x*y` but you are fr
 
 When you run your function, a .png image will be created automatically for you, representing the greyscale color values of the formula you have used.
 
-##### Task 2.3 Maps
+[Open an issue for Task 2.2](../../issues/new?title=Task%202.2%3A%20Slices)
 
-In [src/basics/fibo.go](src/basics/fibo.go) you will find a code skeleton where you will implement the fibonacci closure.
-
-Implement a word counter in `WordCount` in  that counts every occurrence of a word and returns a map with each unique word and the amount of times it occurred in the text. You do not need to take uppercase and lowercase into account, for example *The* and *the* can be treated as different words.
-
-> **Hint:** It can be useful to look into the function `strings.Fields`.
-
-##### Task 2.4 Function closures
+#### Task 2.3 Maps
 
 In [src/basics/maps.go](src/basics/maps.go)
+
+Implement a word counter in `WordCount` that counts every occurrence of a word and returns a map with each unique word and the amount of times it occurred in the text. You do not need to take uppercase and lowercase into account, for example *The* and *the* can be treated as different words.
+
+> **Hint:** It can be useful to look into the function `strings.Fields`
+
+[Open an issue for Task 2.3](../../issues/new?title=Task%202.3%3A%20Maps)
+
+#### Task 2.4 Function closures
+
+In [src/basics/fibo.go](src/basics/fibo.go) you will find a code skeleton where you will implement the fibonacci closure.
 
 A function may be a function closure, a higher-order function that returns binds an environment to a value while also returning a function.
 
@@ -170,7 +184,9 @@ $> go fmt
 > need to worry about it as long as you make sure to run `go fmt` before
 > committing, but it may be good to know.
 
-#### Task 3 - Alarm Clock
+[Open an issue for Task 2.4](../../issues/new?title=Task%202.4%3A%20Function%20Closures)
+
+### Task 3 - Alarm Clock
 
 In this task you will explore time functions using Go. Create a file called
 `alarmclock.go` and write a function `Remind(text string, delay time.Duration)`
@@ -219,7 +235,9 @@ format your code.
 > [`time.Format`](https://pkg.go.dev/time#Time.Format), read it's
 > documentation, and look through the example carefully.
 
-#### Task 4 - Two Part Sum
+[Open an issue for Task 3](../../issues/new?title=Task%203%3A%20Alarm%20Clock)
+
+### Task 4 - Two Part Sum
 
 In this task, you will write *and test* a function to sum an array
 concurrently. When you are done with this section, make sure that you have
@@ -228,7 +246,7 @@ written and committed:
 - At least two new tests for the `ConcurrentSum` function.
 - Implemented `ConcurrentSum` such that it passes all tests.
 
-##### Task 4.1 - Go `testing` framework
+#### Task 4.1 - Go `testing` framework
 
 Start out by reading
 [Chp 9 of the Golang book](https://learning.oreilly.com/library/view/introducing-go/9781491941997/ch09.html) for a
@@ -273,7 +291,9 @@ Now, **write at least two additional tests** in
 [`src/twopartsum/twopartsum_test.go`](src/twopartsum/twopartsum_test.go) and
 make sure that they fail properly before moving on to task 4.2.
 
-##### Task 4.2 - Implementing the concurrent sum function
+[Open an issue for Task 4.1](../../issues/new?title=Task%204.1%3A%20Go%20Testing%20Framework)
+
+#### Task 4.2 - Implementing the concurrent sum function
 
 Now that the testing is out of the way, you can get down to implementing the
 `ConcurrentSum` function. It adds all of the numbers in an array by splitting
@@ -305,12 +325,14 @@ func ConcurrentSum(a []int) int {
 Implement your solution in
 [`src/twopartsum/twopartsum.go`](src/twopartsum/twopartsum.go).
 
-### 🙏 Acknowledgments
+[Open an issue for Task 4.2](../../issues/new?title=Task%204.2%3A%20Implementing%20ConcurrentSum)
+
+## 🙏 Acknowledgments
 
 This task was designed by:
 
 - Simon Larsén
 - Anton Lyxell
+- Vincent Nord Lundström
 - Stefan Nilsson
 - Ric Glassey
-- Vincent Nord Lundström

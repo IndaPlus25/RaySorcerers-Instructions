@@ -24,7 +24,7 @@ func benchmark(text string, numRuns int) int64 {
 	for i := 0; i < numRuns; i++ {
 		WordCount(text)
 	}
-	runtimeMillis := time.Since(start).Nanoseconds() / 1e6
+	runtimeMillis := time.Since(start).Milliseconds()
 
 	return runtimeMillis
 }

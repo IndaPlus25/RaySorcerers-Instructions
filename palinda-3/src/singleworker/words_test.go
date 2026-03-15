@@ -1,14 +1,14 @@
 package main
 
 import (
-	"io/ioutil"
+	"os"
 	"reflect"
 	"testing"
 )
 
 // Test that the word count on loremipsum.txt is correct
 func TestWordCountOnLoremIpsum(t *testing.T) {
-	data, _ := ioutil.ReadFile(DataFile)
+	data, _ := os.ReadFile(DataFile)
 
 	expected := map[string]int{"a": 932, "ac": 1224, "accumsan": 402,
 		"adipiscing": 958, "aenean": 474, "aliqua": 2, "aliquam": 1148, "aliquet": 924,
