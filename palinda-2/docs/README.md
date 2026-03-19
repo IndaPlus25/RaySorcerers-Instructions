@@ -5,12 +5,12 @@ relevant questions from the root of the repo, preferably in
 #### Task 1
 
 ##### Buggy Code 1
-1. What is wrong:
-2. How it was fixed:
+1. What is wrong: Kanalen körde utan buffer, så när man skickar hello world så väntar den tills någon tar emot den, och fastnar därav.
+2. How it was fixed: Gjorde funktionen som en go function så att resten av programmet kan gå vidare och lyssna på kanalen.
 
 ##### Buggy Code 2
-1. What is wrong:
-2. How it was fixed:
+1. What is wrong: Med tanke på att det tar lite tid innan den hinner printa ut siffran i go rutinen hinner skriptet avslutas.
+2. How it was fixed: Jag la till en waiting group så att den väntade med att stänga kanalen och avsluta scriptet tills den var klar med alla prints.
 
 #### Task 2
 
